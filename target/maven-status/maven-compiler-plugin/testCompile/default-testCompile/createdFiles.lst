@@ -1,0 +1,7 @@
+com\nopcommerce\step_definition\LoginSteps.class
+com\nopcommerce\step_definition\HomePageSteps.class
+com\nopcommerce\Hooks.class
+com\nopcommerce\page\LoginPage.class
+com\nopcommerce\driver\DriverManager.class
+com\nopcommerce\page\HomePage.class
+com\nopcommerce\RunCukesTest.class
