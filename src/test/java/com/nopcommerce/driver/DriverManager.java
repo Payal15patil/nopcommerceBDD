@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class DriverManager {
@@ -33,6 +34,11 @@ public class DriverManager {
     }
     public void applyWait(){
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+    }
+    public int generateRandomNumber(){
+        Random random = new Random();
+        // Obtain a number between [0 - 100].
+        return random.nextInt(100);
     }
 //    public void enterEmailAndPassword(){
 //        String myEmail = firstName + randomNumber + lastName + "@gmail.com";

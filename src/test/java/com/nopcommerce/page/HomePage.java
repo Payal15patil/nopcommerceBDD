@@ -9,12 +9,13 @@ public class HomePage extends DriverManager {
     @FindBy(className = "ico-login")
     WebElement loginButtonOnHeader;
 
+    @FindBy(linkText = "Register")
+    WebElement clickRegisterOnHeader;
+
     public void clickLoginButton(){
         loginButtonOnHeader.click();
     }
 
-    @FindBy(linkText = "Register")
-    WebElement clickRegisterOnHeader;
     public void registerOnHeader(){
         clickRegisterOnHeader.click();
     }

@@ -5,10 +5,10 @@ import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = "src/test/resources/MyRegistration.feature",
+@CucumberOptions(features = "src/test/resources",
         dryRun = false,
         strict = true,
-        tags = "@Registration",
+        tags = "@EndToEnd",
         plugin = "json:target/cucumber-report/cucumber.json")
 
 public class RunCukesTest {
