@@ -47,6 +47,9 @@ public class RegisterPage extends DriverManager {
     @FindBy(linkText = "Jewelry" )
     WebElement jewelery;
 
+    @FindBy(linkText = "Electronics")
+    WebElement electronics;
+
     public void selectGender(String gender){
        myGender.click();
     }
@@ -98,6 +101,10 @@ public class RegisterPage extends DriverManager {
 
     public void clickOnJewelery(){
         jewelery.click();
+    }
+
+    public void clickOnElectronics(){
+        electronics.click();
     }
 
 }

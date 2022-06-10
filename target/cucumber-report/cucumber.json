@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 6838690400,
+              "duration": 5570086500,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 7,
-        "name": "Buy One Product",
+        "name": "Buy One Product with Card payment",
         "description": "",
-        "id": "end-to-end-functionality;buy-one-product",
+        "id": "end-to-end-functionality;buy-one-product-with-card-payment",
         "after": [
           {
             "result": {
-              "duration": 1016386100,
+              "duration": 943601000,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 413505100,
+              "duration": 297112300,
               "status": "passed"
             },
             "line": 8,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 749839900,
+              "duration": 648595200,
               "status": "passed"
             },
             "line": 9,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 1108977400,
+              "duration": 962198700,
               "status": "passed"
             },
             "line": 10,
@@ -80,12 +80,12 @@
               },
               {
                 "cells": [
-                  "female",
-                  "moly",
-                  "patel",
-                  "patelmoly@gmail.com",
-                  "106@494",
-                  "106@494"
+                  "male",
+                  "Jay",
+                  "Patil",
+                  "jaypatil20@gmail.com",
+                  "2020@106",
+                  "2020@106"
                 ],
                 "line": 12
               }
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 2199989900,
+              "duration": 913830000,
               "status": "passed"
             },
             "line": 13,
@@ -106,15 +106,15 @@
           },
           {
             "result": {
-              "duration": 1203487300,
+              "duration": 808693900,
               "status": "passed"
             },
             "line": 14,
-            "name": "I click on \"jewelry\"",
+            "name": "I click on \"electronics\"",
             "match": {
               "arguments": [
                 {
-                  "val": "jewelry",
+                  "val": "electronics",
                   "offset": 12
                 }
               ],
@@ -124,22 +124,40 @@
           },
           {
             "result": {
-              "duration": 3684439600,
+              "duration": 649768600,
               "status": "passed"
             },
             "line": 15,
-            "name": "I click on ADD TO CART button for Flower Girl Bracelet",
+            "name": "I click on cell phones from electronics page",
             "match": {
-              "location": "JewelerySteps.iClickOnADDTOCARTButtonForFlowerGirlBracelet()"
+              "location": "ElectronicsSteps.i_click_on_cell_phones_from_electronics_page()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 136697900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I click on ADD TO CART button for Nokia Lumia 1020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1020",
+                  "offset": 46
+                }
+              ],
+              "location": "CellPhoneSteps.i_click_on_ADD_TO_CART_button_for_Nokia_Lumia(int)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 555134600,
+              "duration": 1552209100,
               "status": "passed"
             },
-            "line": 16,
+            "line": 17,
             "name": "I click on shopping cart",
             "match": {
               "location": "JewelerySteps.i_click_on_shopping_cart()"
@@ -148,26 +166,8 @@
           },
           {
             "result": {
-              "duration": 15115837100,
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"#checkout_attribute_1\"}\n  (Session info: chrome\u003d102.0.5005.63)\nFor documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.14.0\u0027, revision: \u0027aacccce0\u0027, time: \u00272018-08-02T20:19:58.91Z\u0027\nSystem info: host: \u0027JAYPATIL\u0027, ip: \u0027192.168.0.33\u0027, os.name: \u0027Windows 11\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u00271.8.0_321\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.63, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\\Users\\patil\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63893}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 22fd89048054a43a875734950ee5f3e3\n*** Element info: {Using\u003did, value\u003dcheckout_attribute_1}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.lang.reflect.Constructor.newInstance(Constructor.java:423)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:368)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy18.click(Unknown Source)\r\n\tat com.nopcommerce.page.ShoppingCartPage.selectGiftWrapping(ShoppingCartPage.java:23)\r\n\tat com.nopcommerce.step_definition.ShoppingCartSteps.i_select_for_Gift_Wrapping(ShoppingCartSteps.java:12)\r\n\tat ✽.And I select \"Yes\" for Gift Wrapping(endToEnd.feature:17)\r\n",
-              "status": "failed"
-            },
-            "line": 17,
-            "name": "I select \"Yes\" for Gift Wrapping",
-            "match": {
-              "arguments": [
-                {
-                  "val": "Yes",
-                  "offset": 10
-                }
-              ],
-              "location": "ShoppingCartSteps.i_select_for_Gift_Wrapping(String)"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
+              "duration": 128839400,
+              "status": "passed"
             },
             "line": 18,
             "name": "I select terms and conditions",
@@ -178,7 +178,8 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1210453200,
+              "status": "passed"
             },
             "line": 19,
             "name": "I click on checkout button",
@@ -186,12 +187,216 @@
               "location": "ShoppingCartSteps.i_click_on_checkout_button()"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 928770400,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "I enter following details on checkout page in Billing Address",
+            "match": {
+              "location": "CheckoutSteps.i_enter_following_details_on_checkout_page_in_Billing_Address(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "country",
+                  "city",
+                  "address1",
+                  "postcode",
+                  "phoneNumber"
+                ],
+                "line": 21
+              },
+              {
+                "cells": [
+                  "United Kingdom",
+                  "London",
+                  "94 Boleyn Road",
+                  "E79QG",
+                  "7449727580"
+                ],
+                "line": 22
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128019800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I click on continue button",
+            "match": {
+              "location": "CheckoutSteps.i_click_on_continue_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 332640200,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I click on continue button of shipping method",
+            "match": {
+              "location": "CheckoutSteps.i_click_on_continue_button_of_shipping_method()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 577316700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I select Credit Card option in payment method",
+            "match": {
+              "location": "CheckoutSteps.i_select_Credit_Card_option_in_payment_method()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 103154200,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I click on continue button of payment method",
+            "match": {
+              "location": "CheckoutSteps.i_click_on_continue_button_of_payment_method()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1866227300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I enter following details on checkout page in Payment Information",
+            "match": {
+              "location": "CheckoutSteps.i_enter_following_details_on_checkout_page_in_Payment_Information(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "cardType",
+                  "cardholderName",
+                  "cardNumber",
+                  "expiryDate",
+                  "cardCode"
+                ],
+                "line": 28
+              },
+              {
+                "cells": [
+                  "Master card",
+                  "Jay Patil",
+                  "4444333322221111",
+                  "11/2024",
+                  "345"
+                ],
+                "line": 29
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 106241100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "I click on continue button of payment information",
+            "match": {
+              "location": "CheckoutSteps.i_click_on_continue_button_of_payment_information()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 534519000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "I click on confirm button on checkout page",
+            "match": {
+              "location": "CheckoutSteps.i_click_on_confirm_button_on_checkout_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1914503900,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "I should see \"Your order has been successfully processed!\" text on \"checkout/completed\" page",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your order has been successfully processed!",
+                  "offset": 14
+                },
+                {
+                  "val": "checkout/completed",
+                  "offset": 68
+                }
+              ],
+              "location": "CommonSteps.iShouldSeeTextOnPage(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 793500,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "I should see order number",
+            "match": {
+              "location": "CheckoutCompletedSteps.i_should_see_order_number()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1651065600,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "I click on \"click here for order details\" link",
+            "match": {
+              "arguments": [
+                {
+                  "val": "click here for order details",
+                  "offset": 12
+                }
+              ],
+              "location": "CheckoutCompletedSteps.i_click_on_link(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 117200,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "I click on print button on order details page",
+            "match": {
+              "location": "OrderDetailsSteps.i_click_on_print_button_on_order_details_page()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
             "line": 6,
-            "name": "@EndToEnd"
+            "name": "@EndToEnd1"
           }
         ]
       }
@@ -200,6 +405,6 @@
     "description": "As a user\r\nI want to register\r\nSo I can buy products",
     "id": "end-to-end-functionality",
     "keyword": "Feature",
-    "uri": "endToEnd.feature"
+    "uri": "endToEnd1.feature"
   }
 ]

@@ -1,6 +1,7 @@
 package com.nopcommerce.step_definition;
 
 import com.nopcommerce.driver.DriverManager;
+import com.nopcommerce.page.CheckoutCompletedPage;
 import com.nopcommerce.page.LoginPage;
 import com.nopcommerce.page.RegisterPage;
 import cucumber.api.PendingException;
@@ -16,6 +17,7 @@ public class CommonSteps extends DriverManager {
     DriverManager driverManager = new DriverManager();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
+    CheckoutCompletedPage checkoutCompletedPage = new CheckoutCompletedPage();
 
     @Then("^I should see \"([^\"]*)\" text on \"([^\"]*)\" page$")
     public void iShouldSeeTextOnPage(String expectedText, String pageType1) throws Throwable {
@@ -30,6 +32,11 @@ public class CommonSteps extends DriverManager {
                 System.out.println(message1);
                 System.out.println(expectedText);
                 assertThat(message1,is(equalToIgnoringCase(expectedText)));
+            case "checkout/completed":
+                String message2 = checkoutCompletedPage.messageOnCheckoutCompletedPage();
+                System.out.println(message2);
+                System.out.println(expectedText);
+                assertThat(message2,is(equalToIgnoringCase(expectedText)));
         }
     }
 

@@ -6,12 +6,12 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 
 public class JewelerySteps extends DriverManager {
+    DriverManager driverManager = new DriverManager();
     JeweleryPage jeweleryPage = new JeweleryPage();
 
     @And("^I click on ADD TO CART button for Flower Girl Bracelet$")
     public void iClickOnADDTOCARTButtonForFlowerGirlBracelet() throws InterruptedException {
-        jeweleryPage.clickOnShoppingCart();
-        Thread.sleep(3000);
+        jeweleryPage.clickOnAddToCart();
     }
 
     @Given("^I click on shopping cart$")

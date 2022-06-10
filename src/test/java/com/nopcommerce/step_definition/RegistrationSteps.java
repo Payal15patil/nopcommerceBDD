@@ -74,7 +74,15 @@ public class RegistrationSteps extends DriverManager {
     }
 
     @And("^I click on \"([^\"]*)\"$")
-    public void iClickOn(String jewelery) throws Throwable {
-        registerPage.clickOnJewelery();
+    public void iClickOn(String category) throws Throwable {
+        switch (category){
+            case "jewelery":
+                registerPage.clickOnJewelery();
+                System.out.println("You are in Jewelery category");
+            case "electronics":
+                registerPage.clickOnElectronics();
+                System.out.println("You are in Electronics category");
+        }
+
     }
 }

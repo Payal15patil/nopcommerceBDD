@@ -37,14 +37,9 @@ public class DriverManager {
     }
     public int generateRandomNumber(){
         Random random = new Random();
-        // Obtain a number between [0 - 100].
-        return random.nextInt(100);
+        // Obtain a number between [0 - 200].
+        return random.nextInt(200);
     }
-//    public void enterEmailAndPassword(){
-//        String myEmail = firstName + randomNumber + lastName + "@gmail.com";
-//        String myPassword = "abc" + randomNumber;
-//    }
-
     public void maxWindow(){
         driver.manage().window().maximize();
     }

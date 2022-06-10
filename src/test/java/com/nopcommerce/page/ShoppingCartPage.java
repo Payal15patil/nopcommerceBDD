@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
 import static com.nopcommerce.driver.DriverManager.driver;
 
@@ -20,10 +21,8 @@ public class ShoppingCartPage extends DriverManager {
     WebElement checkoutButton;
 
     public void selectGiftWrapping(){
-        giftWrapOption.click();
-//        Actions builder = new Actions(driver);
-//        Action clickOnGiftWrapping = builder.contextClick(giftWrapOption).build();
-//        clickOnGiftWrapping.perform();
+        Select select = new Select(giftWrapOption);
+        select.selectByIndex(1);
     }
 
     public void selectTermsAndConditions(){
