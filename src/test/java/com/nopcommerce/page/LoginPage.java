@@ -9,7 +9,7 @@ import javax.swing.*;
 public class LoginPage extends DriverManager {
     DriverManager driverManager = new DriverManager();
 
-    @FindBy(css = ".page-title")
+    @FindBy(css = ".page-title1")
     WebElement titleName;
 
     @FindBy(id = "Email")

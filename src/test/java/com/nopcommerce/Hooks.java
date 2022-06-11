@@ -1,6 +1,7 @@
 package com.nopcommerce;
 
 import com.nopcommerce.driver.DriverManager;
+import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
@@ -11,10 +12,13 @@ public class Hooks {
         driverManager.openBrowser();
         driverManager.gotoUrl();
         driverManager.maxWindow();
-        driverManager.applyWait();
+        driverManager.applyImplicitWait();
     }
     @After
-    public void tearDown(){
+    public void tearDown(Scenario scenario){
+        if(scenario.isFailed()){
+           driverManager.takeScreenshot(scenario);
+        }
         driverManager.closeWindow();
     }
 }

@@ -3,7 +3,7 @@ Feature: login feature
   As a user
   I want to Login
   So I can access website
-
+  @Login1
   Scenario: Validate Login page
     Given I am on the home page
     When I click on the Log in
@@ -17,7 +17,7 @@ Feature: login feature
     And I click on login button
     Then I should see Log out on header
 
-  @Login1
+
   Scenario Outline: Login with more than one Emails and Passwords
     Given I am on the home page
     When I click on the Log in

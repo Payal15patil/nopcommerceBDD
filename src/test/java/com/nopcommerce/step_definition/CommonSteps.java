@@ -27,16 +27,19 @@ public class CommonSteps extends DriverManager {
                 System.out.println(actualMessage);
                 System.out.println(expectedText);
                 assertThat(actualMessage,is(equalToIgnoringCase(expectedText)));
+                break;
             case "registration":
                 String message1 = registerPage.registerMessage();
                 System.out.println(message1);
                 System.out.println(expectedText);
                 assertThat(message1,is(equalToIgnoringCase(expectedText)));
+                break;
             case "checkout/completed":
                 String message2 = checkoutCompletedPage.messageOnCheckoutCompletedPage();
                 System.out.println(message2);
                 System.out.println(expectedText);
                 assertThat(message2,is(equalToIgnoringCase(expectedText)));
+                break;
         }
     }
 

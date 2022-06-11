@@ -4,7 +4,10 @@ import com.nopcommerce.driver.DriverManager;
 import com.nopcommerce.page.HomePage;
 import com.nopcommerce.page.RegisterPage;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
+import java.io.IOException;
 
 import static org.hamcrest.CoreMatchers.endsWith;
 import static org.hamcrest.CoreMatchers.is;
@@ -30,6 +33,20 @@ public class HomeSteps extends DriverManager {
     public void i_click_on_the_register() throws Throwable {
     homePage.registerOnHeader();
     }
+
+    @Given("^I scroll down to footer$")
+    public void i_scroll_down_to_footer() throws Throwable {
+     homePage.scrollToPrivacyText();
+ }
+
+ @When("^I click on privacy policy$")
+ public void i_click_on_privacy_policy() throws Throwable {
+     homePage.clickOnPrivacyPolicy();
+ }
+ @Then("^I take screenshot of search field$")
+ public void iTakeScreenshotOfSearchField() throws IOException {
+  homePage.takeSearchFieldScreenshot();
+ }
 
 
 
