@@ -36,6 +36,11 @@ public class RegistrationSteps extends DriverManager {
         registerPage.enterLastName(lastName);
     }
 
+    @And("^I select Date of Birth$")
+    public void iSelectDateOfBirth(String dateOfBirth) {
+        registerPage.selectDateOfBirth(dateOfBirth);
+    }
+
     @Given("^I enter email$")
     public void i_enter_email(String email) throws Throwable {
         registerPage.enterEmail(email);
@@ -85,4 +90,10 @@ public class RegistrationSteps extends DriverManager {
         }
 
     }
+
+    @Given("^I click on continue button on register/result page$")
+    public void i_click_on_continue_button_on_register_result_page() throws Throwable {
+        registerPage.clickContinueButton();
+    }
+
 }

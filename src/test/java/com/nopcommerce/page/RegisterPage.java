@@ -50,6 +50,12 @@ public class RegisterPage extends DriverManager {
     @FindBy(linkText = "Electronics")
     WebElement electronics;
 
+    @FindBy(className = "button-1 register-continue-button")
+    WebElement continueButton;
+
+    public void clickContinueButton(){
+        continueButton.click();
+    }
     public void selectGender(String gender){
        myGender.click();
     }
@@ -62,7 +68,7 @@ public class RegisterPage extends DriverManager {
         myLastName.sendKeys(lastName);
     }
 
-    public void selectDateOfBirth(){
+    public void selectDateOfBirth(String dateOfBirth){
 
         Select select1 = new Select(birthDay);
         select1.selectByVisibleText("24");

@@ -17,11 +17,6 @@ import java.util.concurrent.TimeUnit;
 public class DriverManager {
     public static WebDriver driver;
     String url = "https://demo.nopcommerce.com/";
-//    String firstName = "payal";
-//    String lastName = "patil";
-//    double randomNumber = Math.random();
-//    String password = "157157";
-//    String confirmPassword = password;
 
     public DriverManager(){
         PageFactory.initElements(driver,this);

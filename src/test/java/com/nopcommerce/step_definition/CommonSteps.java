@@ -1,11 +1,10 @@
 package com.nopcommerce.step_definition;
 
 import com.nopcommerce.driver.DriverManager;
-import com.nopcommerce.page.CheckoutCompletedPage;
-import com.nopcommerce.page.LoginPage;
-import com.nopcommerce.page.RegisterPage;
+import com.nopcommerce.page.*;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 import static org.hamcrest.CoreMatchers.containsString;
@@ -15,9 +14,11 @@ import static org.hamcrest.Matchers.equalToIgnoringCase;
 
 public class CommonSteps extends DriverManager {
     DriverManager driverManager = new DriverManager();
+    HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     RegisterPage registerPage = new RegisterPage();
     CheckoutCompletedPage checkoutCompletedPage = new CheckoutCompletedPage();
+    ContactUsPage contactUsPage = new ContactUsPage();
 
     @Then("^I should see \"([^\"]*)\" text on \"([^\"]*)\" page$")
     public void iShouldSeeTextOnPage(String expectedText, String pageType1) throws Throwable {
@@ -40,6 +41,12 @@ public class CommonSteps extends DriverManager {
                 System.out.println(expectedText);
                 assertThat(message2,is(equalToIgnoringCase(expectedText)));
                 break;
+            case "contactus":
+                String message3 = contactUsPage.getResultTextOnContactUsPage();
+                System.out.println(message3);
+                System.out.println(expectedText);
+                assertThat(message3,is(equalToIgnoringCase(expectedText)));
+                break;
         }
     }
 
@@ -58,5 +65,7 @@ public class CommonSteps extends DriverManager {
                 System.out.println(expectedUrl);
         }
     }
+
+
 
 }

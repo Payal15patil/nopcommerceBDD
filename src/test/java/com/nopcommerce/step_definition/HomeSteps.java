@@ -37,23 +37,32 @@ public class HomeSteps extends DriverManager {
     @Given("^I scroll down to footer$")
     public void i_scroll_down_to_footer() throws Throwable {
      homePage.scrollToPrivacyText();
- }
+    }
 
- @When("^I click on privacy policy$")
- public void i_click_on_privacy_policy() throws Throwable {
+    @When("^I click on privacy policy$")
+    public void i_click_on_privacy_policy() throws Throwable {
      homePage.clickOnPrivacyPolicy();
- }
- @Then("^I take screenshot of search field$")
- public void iTakeScreenshotOfSearchField() throws IOException {
-  homePage.takeSearchFieldScreenshot();
- }
+    }
 
+    @Then("^I take screenshot of search field$")
+    public void iTakeScreenshotOfSearchField() throws IOException {
+     homePage.takeSearchFieldScreenshot();
+    }
 
+    @When("^I click on Contact Us$")
+    public void i_click_on_Contact_Us() throws Throwable {
+     homePage.clickOnContactUs();
+    }
 
+    @Given("^I scroll down to featured products$")
+    public void i_scroll_down_to_featured_products() throws Throwable {
+     homePage.scrollToFeaturedProducts();
+    }
 
-
-
-
+    @Given("^I click on \\$(\\d+) Virtual Gift Card product$")
+    public void i_click_on_$_Virtual_Gift_Card_product(int arg1) throws Throwable {
+     homePage.clickOnGiftCardProduct();
+    }
 
 
 }
