@@ -13,6 +13,7 @@ public class Hooks {
         driverManager.gotoUrl();
         driverManager.maxWindow();
         driverManager.applyImplicitWait();
+
     }
     @After
     public void tearDown(Scenario scenario){

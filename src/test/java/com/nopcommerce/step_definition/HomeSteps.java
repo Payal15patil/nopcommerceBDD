@@ -54,15 +54,30 @@ public class HomeSteps extends DriverManager {
      homePage.clickOnContactUs();
     }
 
-    @Given("^I scroll down to featured products$")
-    public void i_scroll_down_to_featured_products() throws Throwable {
-     homePage.scrollToFeaturedProducts();
+    @Given("^I scroll down to community poll$")
+    public void i_scroll_down_to_community_poll() throws Throwable {
+     homePage.scrollToCommunityPollText();
     }
 
-    @Given("^I click on \\$(\\d+) Virtual Gift Card product$")
-    public void i_click_on_$_Virtual_Gift_Card_product(int arg1) throws Throwable {
-     homePage.clickOnGiftCardProduct();
+    @Given("^I select good option for do you like nopcommerce\\?$")
+    public void i_select_good_option_for_do_you_like_nopcommerce() throws Throwable {
+     homePage.clickSecondOptionInCommunityPoll();
     }
 
+    @When("^I select vote button on home page$")
+    public void i_select_vote_button_on_home_page() throws Throwable {
+     homePage.clickOnVoteButton();
+    }
+
+
+    @Given("^I enter \"([^\"]*)\" in search box$")
+    public void i_enter_in_search_box(String arg1) throws Throwable {
+     homePage.enterTextInSearchBox();
+    }
+
+    @Given("^I click on search$")
+    public void i_click_on_search() throws Throwable {
+     homePage.clickOnSearch();
+    }
 
 }

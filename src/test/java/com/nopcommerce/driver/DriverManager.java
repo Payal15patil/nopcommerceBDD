@@ -3,6 +3,7 @@ package com.nopcommerce.driver;
 import cucumber.api.Scenario;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
+import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -11,8 +12,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+
+import static java.time.Duration.ofSeconds;
 
 public class DriverManager {
     public static WebDriver driver;
@@ -42,7 +46,7 @@ public class DriverManager {
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
     public void waitUntilElementIsVisible(WebElement element,int timeOut,String failureMessage){
-        WebDriverWait wait = new WebDriverWait(driver,timeOut);
+        WebDriverWait wait = new WebDriverWait(driver,30);
         wait.until(ExpectedConditions.visibilityOf(element));
         wait.withMessage(failureMessage);
     }

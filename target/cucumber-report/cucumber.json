@@ -1,0 +1,188 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 6080263600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Validate search box to search products",
+        "description": "",
+        "id": "search-box-feature;validate-search-box-to-search-products",
+        "after": [
+          {
+            "result": {
+              "duration": 735843300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 167385400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I am on the home page",
+            "match": {
+              "location": "HomeSteps.i_am_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 120052000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I enter \"Electronics\" in search box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Electronics",
+                  "offset": 9
+                }
+              ],
+              "location": "HomeSteps.i_enter_in_search_box(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1526201100,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I click on search",
+            "match": {
+              "location": "HomeSteps.i_click_on_search()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 77503100,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I click on advanced search check box",
+            "match": {
+              "location": "SearchSteps.i_click_on_advanced_search_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 289333000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I select \"Electronics \u003e\u003e Cell phones\" option in category field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Electronics \u003e\u003e Cell phones",
+                  "offset": 10
+                }
+              ],
+              "location": "SearchSteps.i_select_option_in_category_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 80327300,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "I click on automatically search sub categories  check box",
+            "match": {
+              "location": "SearchSteps.i_click_on_automatically_search_sub_categories_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 160569100,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "I select \"All\" option in manufacturer field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "All",
+                  "offset": 10
+                }
+              ],
+              "location": "SearchSteps.i_select_option_in_manufacturer_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74905800,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "I click on search in product descriptions check box",
+            "match": {
+              "location": "SearchSteps.i_click_on_search_in_product_descriptions_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 446457400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "I click on search button",
+            "match": {
+              "location": "SearchSteps.i_click_on_search_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 96100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "I should see all products",
+            "match": {
+              "location": "SearchSteps.i_should_see_all_products()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Search box feature",
+    "description": "As a customer\r\nI want to search products\r\nSo I can see available products",
+    "id": "search-box-feature",
+    "keyword": "Feature",
+    "uri": "searchBox.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Search"
+      }
+    ]
+  }
+]
