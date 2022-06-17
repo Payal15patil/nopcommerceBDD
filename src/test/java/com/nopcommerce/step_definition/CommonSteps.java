@@ -47,6 +47,12 @@ public class CommonSteps extends DriverManager {
                 System.out.println(expectedText);
                 assertThat(message3,is(equalToIgnoringCase(expectedText)));
                 break;
+            case "home":
+                String message4 = homePage.voteTextOnHomePage();
+                System.out.println(message4);
+                System.out.println(expectedText);
+                assertThat(message4,is(equalToIgnoringCase(expectedText)));
+                break;
         }
     }
 
