@@ -3,7 +3,7 @@ Feature: End to End Functionality
   I want to register
   So I can buy products
 
-  @EndToEnd1
+  @EndToEnd
   Scenario: Buy One Product with Card payment
     Given I am on the home page
     And I click on the register
@@ -31,5 +31,5 @@ Feature: End to End Functionality
     And I click on confirm button on checkout page
     And I should see "Your order has been successfully processed!" text on "checkout/completed" page
     And I should see order number
-    And I click on "click here for order details" link
-    And I click on print button on order details page
+#    And I click on "click here for order details" link
+#    And I click on print button on order details page

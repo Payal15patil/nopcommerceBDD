@@ -14,8 +14,8 @@ public class CheckoutCompletedSteps extends DriverManager {
         System.out.println(myOrderNumber);
     }
 
-    @Then("^I click on \"([^\"]*)\" link$")
-    public void i_click_on_link(String givenLink) throws Throwable {
-       checkoutCompletedPage.givenLinkOnCheckoutCompletedPage();
-    }
+//    @Then("^I click on \"([^\"]*)\" link$")
+//    public void i_click_on_link(String givenLink) throws Throwable {
+//       checkoutCompletedPage.givenLinkOnCheckoutCompletedPage();
+//    }
 }

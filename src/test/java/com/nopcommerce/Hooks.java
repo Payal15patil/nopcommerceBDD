@@ -8,8 +8,9 @@ import cucumber.api.java.Before;
 public class Hooks {
     DriverManager driverManager = new DriverManager();
     @Before
-    public void setUp(){
-        driverManager.openBrowser();
+    public void setUp() throws IllegalAccessException {
+//        driverManager.runOnLocalBrowser();
+        driverManager.runInHeadlessBrowser();
         driverManager.gotoUrl();
         driverManager.maxWindow();
         driverManager.applyImplicitWait();
