@@ -80,4 +80,16 @@ public class HomeSteps extends DriverManager {
      homePage.clickOnSearch();
     }
 
+    @Given("^I hover on sub categories of apparel$")
+    public void i_hover_on_sub_categories_of_apparel() throws Throwable {
+     homePage.hoverOnApparelCategory();
+    }
+
+    @Given("^I click on Accessories$")
+    public void i_click_on_Accessories() throws Throwable {
+     homePage.clickOnSubCategoryFromApparel();
+    }
+
+
+
 }

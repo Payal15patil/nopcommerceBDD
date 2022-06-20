@@ -18,7 +18,7 @@ public class ContactUsPage extends DriverManager {
     @FindBy(name = "send-email")
     WebElement submitButton;
 
-    @FindBy(className = "result")
+    @FindBy(xpath = "/html/body/div[6]/div[3]/div/div/div/div[2]/div[2]")
     WebElement resultText;
 
     public void enterNameForContactUs(String name){
