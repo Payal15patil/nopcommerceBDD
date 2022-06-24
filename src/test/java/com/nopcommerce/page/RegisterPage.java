@@ -38,33 +38,22 @@ public class RegisterPage extends DriverManager {
     @FindBy(id = "register-button")
     WebElement registerButton;
 
-    @FindBy(xpath = "/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]")
-    WebElement messageOnRegisterResult;
+    @FindBy(linkText = "Gift Cards")
+    WebElement giftCards;
 
-    @FindBy(linkText = "My account")
-    WebElement myAccount;
 
-    @FindBy(linkText = "Jewelry" )
-    WebElement jewelery;
-
-    @FindBy(linkText = "Electronics")
-    WebElement electronics;
-
-    @FindBy(className = "button-1 register-continue-button")
-    WebElement continueButton;
-
-    public void clickContinueButton(){
-        continueButton.click();
-    }
     public void selectGender(String gender){
        myGender.click();
     }
 
     public void enterFirstName(String firstName){
+        myFirstName.clear();
         myFirstName.sendKeys(firstName);
     }
 
     public void enterLastName(String lastName){
+
+        myLastName.clear();
         myLastName.sendKeys(lastName);
     }
 
@@ -80,17 +69,20 @@ public class RegisterPage extends DriverManager {
     }
 
     public void enterEmail(String email){
-
+        emailID.clear();
+//        emailID.sendKeys(email);
         int myRandomNum = driverManager.generateRandomNumber();
         emailID.sendKeys(myRandomNum+email);
     }
 
     public void enterPassword(String password){
-
+        myPassword.clear();
         myPassword.sendKeys(password);
     }
 
     public void enterConfirmPassword(String confirmPassword){
+
+        myConfirmPassword.clear();
         myConfirmPassword.sendKeys(confirmPassword);
     }
 
@@ -98,19 +90,9 @@ public class RegisterPage extends DriverManager {
         registerButton.submit();
     }
 
-    public String registerMessage(){
-       return messageOnRegisterResult.getText();
-    }
 
-    public void myAccountButtonOnHeader(){
-    }
-
-    public void clickOnJewelery(){
-        jewelery.click();
-    }
-
-    public void clickOnElectronics(){
-        electronics.click();
+    public void clickOnGiftCards(){
+        giftCards.click();
     }
 
 }

@@ -26,11 +26,13 @@ public class LoginPage extends DriverManager {
     }
 
     public void enterEmailAndPassword(String myEmail, String myPassword){
-        email.clear();
         int myRandomNumber = driverManager.generateRandomNumber();
-        email.sendKeys(myRandomNumber+myEmail);
+        email.clear();
+        email.sendKeys(myEmail);
+//        email.sendKeys(myRandomNumber+myEmail);
         password.clear();
-        password.sendKeys(myRandomNumber+myPassword);
+        password.sendKeys(myPassword);
+//        password.sendKeys(myRandomNumber+myPassword);
     }
 
     public void submitLoginDetails(){

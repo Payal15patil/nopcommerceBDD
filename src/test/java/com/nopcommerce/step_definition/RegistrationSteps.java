@@ -61,10 +61,6 @@ public class RegistrationSteps extends DriverManager {
         registerPage.clickOnRegister();
     }
 
-    @Then("^I should see My account on header$")
-    public void i_should_see_My_account_on_header() throws Throwable {
-        registerPage.myAccountButtonOnHeader();
-    }
 
     @Given("^I enter following details to register$")
     public void i_enter_following_details_to_register(DataTable registrationTable) throws Throwable {
@@ -76,24 +72,21 @@ public class RegistrationSteps extends DriverManager {
         registerPage.enterEmail(data.get(0).get("email"));
         registerPage.enterPassword(data.get(0).get("password"));
         registerPage.enterConfirmPassword(data.get(0).get("confirmPassword"));
+//        registerPage.selectGender(data.get(1).get("gender"));
+//        registerPage.enterFirstName(data.get(1).get("firstName"));
+//        registerPage.enterLastName(data.get(1).get("lastName"));
+//        registerPage.enterEmail(data.get(1).get("email"));
+//        registerPage.enterPassword(data.get(1).get("password"));
+//        registerPage.enterConfirmPassword(data.get(1).get("confirmPassword"));
+//        registerPage.selectGender(data.get(2).get("gender"));
+//        registerPage.enterFirstName(data.get(2).get("firstName"));
+//        registerPage.enterLastName(data.get(2).get("lastName"));
+//        registerPage.enterEmail(data.get(2).get("email"));
+//        registerPage.enterPassword(data.get(2).get("password"));
+//        registerPage.enterConfirmPassword(data.get(2).get("confirmPassword"));
     }
 
-    @And("^I click on \"([^\"]*)\"$")
-    public void iClickOn(String category) throws Throwable {
-        switch (category){
-            case "jewelery":
-                registerPage.clickOnJewelery();
-                System.out.println("You are in Jewelery category");
-            case "electronics":
-                registerPage.clickOnElectronics();
-                System.out.println("You are in Electronics category");
-        }
 
-    }
 
-    @Given("^I click on continue button on register/result page$")
-    public void i_click_on_continue_button_on_register_result_page() throws Throwable {
-        registerPage.clickContinueButton();
-    }
 
 }

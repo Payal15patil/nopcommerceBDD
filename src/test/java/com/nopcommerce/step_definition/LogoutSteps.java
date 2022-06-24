@@ -14,9 +14,7 @@ public class LogoutSteps extends DriverManager {
     @Then("^I should see Log out on header$")
     public void i_should_see_Log_out_on_header() throws Throwable {
 
-        logoutPage.clickOnLogout();
-
-//      boolean isLogoutButtonDisplayed = logoutPage.clickOnLogout();
-//      assertThat(isLogoutButtonDisplayed, is(true));
+      boolean isLogoutButtonDisplayed = logoutPage.clickOnLogout();
+      assertThat(isLogoutButtonDisplayed, is(true));
     }
 }

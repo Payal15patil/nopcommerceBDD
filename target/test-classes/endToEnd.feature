@@ -1,4 +1,4 @@
-@moneyOrder
+@EndToEnd
 Feature: End to End Functionality
   As a user
   I want to register
@@ -10,7 +10,7 @@ Feature: End to End Functionality
     And I click on the register
     And I enter following details to register
       | gender | firstName | lastName | email               | password | confirmPassword |
-      | female | pinkal     | patel    | patelpinky@gmail.com | 206@494  | 206@494         |
+      | female | pinkal     | patel    | patelpinky15@gmail.com | 206@494  | 206@494         |
     And I click on Register Button
     And I click on "jewelry"
     And I click on ADD TO CART button for Flower Girl Bracelet

@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 4336259400,
+              "duration": 4636887800,
               "status": "passed"
             },
             "match": {
@@ -17,11 +17,11 @@
         "line": 7,
         "name": "Validate position for products",
         "description": "",
-        "id": "product-display;validate-position-for-products",
+        "id": "product-position;validate-position-for-products",
         "after": [
           {
             "result": {
-              "duration": 742998100,
+              "duration": 751751000,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 206281100,
+              "duration": 246102000,
               "status": "passed"
             },
             "line": 8,
@@ -46,70 +46,70 @@
           },
           {
             "result": {
-              "duration": 1233599599,
+              "duration": 190871200,
               "status": "passed"
             },
             "line": 9,
-            "name": "I click on \"digital downloads\"",
+            "name": "I hover on sub categories of apparel",
             "match": {
-              "arguments": [
-                {
-                  "val": "digital downloads",
-                  "offset": 12
-                }
-              ],
-              "location": "RegistrationSteps.iClickOn(String)"
+              "location": "HomeSteps.i_hover_on_sub_categories_of_apparel()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 141143300,
+              "duration": 1486648100,
               "status": "passed"
             },
             "line": 10,
-            "name": "I select \"9\" per page in display box",
+            "name": "I click on Accessories",
+            "match": {
+              "location": "HomeSteps.i_click_on_Accessories()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 233235300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I select \"Name: A TO Z\" position in sort by box",
             "match": {
               "arguments": [
                 {
-                  "val": "9",
+                  "val": "Name: A TO Z",
                   "offset": 10
                 }
               ],
-              "location": "DigitalDownloadSteps.i_select_per_page_in_display_box(String)"
+              "location": "AccessoriesSteps.i_select_position_in_sort_by_box(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1004901,
+              "duration": 168000,
               "status": "passed"
             },
-            "line": 11,
-            "name": "I should see 9 products on page",
+            "line": 12,
+            "name": "I should see all product in A to Z position",
             "match": {
-              "arguments": [
-                {
-                  "val": "9",
-                  "offset": 13
-                }
-              ],
-              "location": "DigitalDownloadSteps.i_should_see_products_on_page(int)"
+              "location": "AccessoriesSteps.i_should_see_all_product_in_A_to_Z_position()"
             },
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "product display",
-    "description": "As a customer\r\nI want select display for products\r\nSo I can check products",
-    "id": "product-display",
+    "name": "product position",
+    "description": "As a customer\r\nI want select position for products\r\nSo I can check products",
+    "id": "product-position",
     "keyword": "Feature",
-    "uri": "productDisplay.feature",
+    "uri": "productPosition.feature",
     "tags": [
       {
         "line": 1,
-        "name": "@Display"
+        "name": "@position"
       }
     ]
   }

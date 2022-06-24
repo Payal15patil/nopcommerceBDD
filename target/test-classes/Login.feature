@@ -1,37 +1,51 @@
-
 Feature: login feature
   As a user
   I want to Login
   So I can access website
-  @Login1
+
   Scenario: Validate Login page
     Given I am on the home page
     When I click on the Log in
     Then I should see "Welcome, Please Sign In!" text on "login" page
     And the url should contain with "/login"
 
+  @Login1
   Scenario: Successful Login with valid credentials
     Given I am on the home page
+    And I click on the register
+    And I enter following details to register
+      | gender | firstName | lastName | date of birth | email                 | password | confirmPassword |
+      | male   | sneha     | patil    | 26/7/1999     | snehpatil24@gmail.com | 456456   | 456456          |
+    And I click on Register Button
+    And I click on continue button on register/result page
+    And I click on logout on register/result page
     When I click on the Log in
-    And I enter emailId "molyp@gmail.com" and password "890890"
+    And I enter emailId "snehpatil24@gmail.com" and password "456456"
     And I click on login button
     Then I should see Log out on header
 
 
   Scenario Outline: Login with more than one Emails and Passwords
     Given I am on the home page
+    And I click on the register
+    And I enter following details to register
+      | gender | firstName | lastName | date of birth | email                 | password | confirmPassword |
+      | male   | sneha     | patil    | 26/7/1999     | snehpatil22@gmail.com | 456456   | 456456          |
+      | female | pink      | patel    | 25/5/1999     | pinkalpatel@gmail.com | 255255   | 255255          |
+      | male   | vats      | patel    | 16/4/2002     | vpatel@gmail.com      | 164164   | 164164          |
+    And I click on Register Button
+    And I click on continue button on register/result page
+    And I click on logout on register/result page
     When I click on the Log in
     And I enter emailId "<Email>" and password "<Password>"
     And I click on login button
     Then I should see Log out on header
 
     Examples:
-      | Email              | Password    |
-      | molyp@gmail.com    | 890890      |
-      | sa@sa.com          | 87654321    |
-      | kotadia@gmail.com  | Samit@0304  |
-      | samitk@gmail.co.uk | Kotadia@123 |
-      | samit@samit.com    | 12345678    |
+      | Email                 | Password |
+      | snehpatil22@gmail.com | 456456   |
+      | pinkalpatel@gmail.com | 255255   |
+      | vpatel@gmail.com      | 164164   |
 
 
 
