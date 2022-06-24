@@ -2,6 +2,8 @@ package com.nopcommerce.page;
 
 import com.nopcommerce.driver.DriverManager;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
@@ -43,6 +45,15 @@ public class HomePage extends DriverManager {
 
     @FindBy(linkText = "Search")
     WebElement clickSearch;
+
+    @FindBy(linkText = "Apparel")
+    WebElement apparel;
+
+    @FindBy(linkText = "Accessories")
+    WebElement accessories;
+
+    @FindBy(linkText = "Digital downloads")
+    WebElement digitalDownload;
 
     public void clickLoginButton(){
         waitUntilElementIsVisible(loginButtonOnHeader,20,"Login Button is not visible");
@@ -89,5 +100,19 @@ public class HomePage extends DriverManager {
 
     public void clickOnSearch(){
         clickSearch.click();
+    }
+
+    public void hoverOnApparelCategory(){
+        Actions action = new Actions(driver);
+        action.moveToElement(apparel).perform();
+    }
+
+    public void clickOnSubCategoryFromApparel(){
+        Actions action = new Actions(driver);
+        action.moveToElement(accessories).click().build().perform();
+    }
+
+    public void clickOnDigitalDownload(){
+        digitalDownload.click();
     }
 }

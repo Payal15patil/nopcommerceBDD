@@ -20,6 +20,7 @@ import static org.hamcrest.Matchers.equalToIgnoringCase;
 public class RegistrationSteps extends DriverManager {
     DriverManager driverManager = new DriverManager();
     RegisterPage registerPage = new RegisterPage();
+    HomePage homePage = new HomePage();
 
     @Given("^I select \"([^\"]*)\"$")
     public void i_select(String gender) throws Throwable {
@@ -84,16 +85,17 @@ public class RegistrationSteps extends DriverManager {
             case "jewelery":
                 registerPage.clickOnJewelery();
                 System.out.println("You are in Jewelery category");
+                break;
             case "electronics":
                 registerPage.clickOnElectronics();
                 System.out.println("You are in Electronics category");
+                break;
+            case "digital downloads":
+                homePage.clickOnDigitalDownload();
+                System.out.println("You are in Electronics category");
+                break;
         }
-
     }
 
-    @Given("^I click on continue button on register/result page$")
-    public void i_click_on_continue_button_on_register_result_page() throws Throwable {
-        registerPage.clickContinueButton();
-    }
 
 }
