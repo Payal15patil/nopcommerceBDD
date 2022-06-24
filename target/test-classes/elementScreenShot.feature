@@ -1,4 +1,4 @@
-@p1
+@screenshot
 Feature: Element screenshot
 
 

@@ -1,4 +1,4 @@
-@cu
+@contact
 Feature: Contact Us Feature
   As a customer
   I want to contact the store owner

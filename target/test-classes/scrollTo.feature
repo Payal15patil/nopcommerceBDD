@@ -1,4 +1,4 @@
-
+@Scroll
 Feature:
 
   Scenario: Validate Login page

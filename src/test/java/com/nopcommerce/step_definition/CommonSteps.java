@@ -19,6 +19,8 @@ public class CommonSteps extends DriverManager {
     RegisterPage registerPage = new RegisterPage();
     CheckoutCompletedPage checkoutCompletedPage = new CheckoutCompletedPage();
     ContactUsPage contactUsPage = new ContactUsPage();
+    ProductReviewPage productReviewPage = new ProductReviewPage();
+    RegisterResultPage registerResultPage = new RegisterResultPage();
 
     @Then("^I should see \"([^\"]*)\" text on \"([^\"]*)\" page$")
     public void iShouldSeeTextOnPage(String expectedText, String pageType1) throws Throwable {
@@ -30,7 +32,7 @@ public class CommonSteps extends DriverManager {
                 assertThat(actualMessage,is(equalToIgnoringCase(expectedText)));
                 break;
             case "registration":
-                String message1 = registerPage.registerMessage();
+                String message1 = registerResultPage.registerMessage();
                 System.out.println(message1);
                 System.out.println(expectedText);
                 assertThat(message1,is(equalToIgnoringCase(expectedText)));
@@ -52,6 +54,12 @@ public class CommonSteps extends DriverManager {
                 System.out.println(message4);
                 System.out.println(expectedText);
                 assertThat(message4,is(equalToIgnoringCase(expectedText)));
+                break;
+            case "productreview":
+                String message5 = productReviewPage.getTextOnProductReviewPage();
+                System.out.println(message5);
+                System.out.println(expectedText);
+                assertThat(message5,is(equalToIgnoringCase(expectedText)));
                 break;
         }
     }

@@ -3,6 +3,7 @@ package com.nopcommerce.step_definition;
 import com.nopcommerce.driver.DriverManager;
 import com.nopcommerce.page.HomePage;
 import com.nopcommerce.page.RegisterPage;
+import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -78,6 +79,16 @@ public class HomeSteps extends DriverManager {
     @Given("^I click on search$")
     public void i_click_on_search() throws Throwable {
      homePage.clickOnSearch();
+    }
+
+    @Given("^I hover on sub categories of apparel$")
+    public void i_hover_on_sub_categories_of_apparel() throws Throwable {
+     homePage.moveToApparelCategory();
+    }
+
+    @Given("^I click on Accessories$")
+    public void i_click_on_Accessories() throws Throwable {
+     homePage.clickOnAccessories();
     }
 
 }

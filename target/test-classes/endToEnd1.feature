@@ -3,7 +3,7 @@ Feature: End to End Functionality
   I want to register
   So I can buy products
 
-  @EndToEnd
+  @EndToEnd1
   Scenario: Buy One Product with Card payment
     Given I am on the home page
     And I click on the register
