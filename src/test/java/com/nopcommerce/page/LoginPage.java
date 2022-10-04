@@ -30,7 +30,7 @@ public class LoginPage extends DriverManager {
         email.clear();
         email.sendKeys(myEmail);
 //        email.sendKeys(myRandomNumber+myEmail);
-        password.clear();
+//        password.clear();
         password.sendKeys(myPassword);
 //        password.sendKeys(myRandomNumber+myPassword);
     }

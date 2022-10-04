@@ -51,6 +51,9 @@ public class HomePage extends DriverManager {
     @FindBy(xpath = "/html/body/div[6]/div[2]/ul[1]/li[3]/ul/li[3]/a")
     WebElement accessories;
 
+    @FindBy(linkText = "Digital downloads")
+    WebElement digitalDownload;
+
     public void clickLoginButton(){
         waitUntilElementIsVisible(loginButtonOnHeader,20,"Login Button is not visible");
         loginButtonOnHeader.click();
@@ -105,5 +108,9 @@ public class HomePage extends DriverManager {
     public void clickOnAccessories(){
         Actions actions = new Actions(driver);
         actions.moveToElement(accessories).click().build().perform();
+    }
+
+    public void clickOnDigitalDownload(){
+        digitalDownload.click();
     }
 }

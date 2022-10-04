@@ -1,4 +1,4 @@
-@EndToEnd
+@EndToEnd @smoke
 Feature: End to End Functionality
   As a user
   I want to register

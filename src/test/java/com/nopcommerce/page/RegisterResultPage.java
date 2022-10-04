@@ -18,7 +18,7 @@ public class RegisterResultPage extends DriverManager {
     @FindBy(linkText = "My account")
     WebElement myAccount;
 
-    @FindBy(linkText = "Jewelry")
+    @FindBy(xpath = "/html/body/div[6]/div[2]/ul[1]/li[6]/a")
     WebElement jewelery;
 
     @FindBy(linkText = "Electronics")

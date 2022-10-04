@@ -1,6 +1,7 @@
 package com.nopcommerce.step_definition;
 
 import com.nopcommerce.driver.DriverManager;
+import com.nopcommerce.page.HomePage;
 import com.nopcommerce.page.RegisterPage;
 import com.nopcommerce.page.RegisterResultPage;
 import cucumber.api.java.en.And;
@@ -15,6 +16,7 @@ public class RegisterResultsSteps extends DriverManager {
 
     RegisterResultPage registerResultPage = new RegisterResultPage();
     RegisterPage registerPage = new RegisterPage();
+    HomePage homePage = new HomePage();
 
     @Given("^I click on continue button on register/result page$")
     public void i_click_on_continue_button_on_register_result_page() throws Throwable {
@@ -25,6 +27,7 @@ public class RegisterResultsSteps extends DriverManager {
     public void i_should_see_My_account_on_header() throws Throwable {
         registerResultPage.myAccountButtonOnHeader();
     }
+
     @And("^I click on \"([^\"]*)\"$")
     public void iClickOn(String category) throws Throwable {
         switch (category){
@@ -39,6 +42,10 @@ public class RegisterResultsSteps extends DriverManager {
             case "giftcards":
                 registerPage.clickOnGiftCards();
                 System.out.println("You are in Gift Cards category");
+                break;
+            case "digitaldownloads":
+                homePage.clickOnDigitalDownload();
+                System.out.println("You are in Digital Downloads category");
                 break;
         }
     }

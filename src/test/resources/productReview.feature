@@ -1,4 +1,4 @@
-@review
+@review @regression
 Feature: Review product
   As a customer
   I want to add review for product

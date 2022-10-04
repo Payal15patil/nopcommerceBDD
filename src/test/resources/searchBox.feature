@@ -1,4 +1,4 @@
-@search
+@search @regression
 Feature: Search box feature
   As a customer
   I want to search products

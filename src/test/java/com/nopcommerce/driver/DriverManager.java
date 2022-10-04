@@ -130,6 +130,19 @@ public class DriverManager {
         // Obtain a number between [0 - 200].
         return random.nextInt(200);
     }
+
+    public static String getRandomString(int length) {
+        final String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        StringBuilder result = new StringBuilder();
+
+        while (length > 0) {
+            Random random1 = new Random();
+            result.append(characters.charAt(random1.nextInt(characters.length())));
+            length--;
+        }
+        return result.toString();
+    }
+
     public void takeScreenshot(Scenario scenario){
 
         byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);

@@ -1,4 +1,4 @@
-@position
+@position @regression
 Feature: product position
   As a customer
   I want select position for products

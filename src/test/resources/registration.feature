@@ -1,4 +1,4 @@
-
+@smoke
 Feature: Register Feature
   As a user
   I want to register
@@ -20,7 +20,7 @@ Feature: Register Feature
     And I should see Log out on header
     And the url should contain with "/registerresult"
 
-  @Registration
+  @registration
   Scenario: Registration with Data Table
     Given I am on the home page
     And I click on the register

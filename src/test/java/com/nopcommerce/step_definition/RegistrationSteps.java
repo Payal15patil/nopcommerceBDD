@@ -56,12 +56,6 @@ public class RegistrationSteps extends DriverManager {
         registerPage.enterConfirmPassword(confirmPassword);
     }
 
-    @When("^I click on Register Button$")
-    public void i_click_on_Register_Button() throws Throwable {
-        registerPage.clickOnRegister();
-    }
-
-
     @Given("^I enter following details to register$")
     public void i_enter_following_details_to_register(DataTable registrationTable) throws Throwable {
         List<Map<String, String>> data = registrationTable.asMaps(String.class, String.class);
@@ -86,7 +80,8 @@ public class RegistrationSteps extends DriverManager {
 //        registerPage.enterConfirmPassword(data.get(2).get("confirmPassword"));
     }
 
-
-
-
+    @When("^I click on Register Button$")
+    public void i_click_on_Register_Button() throws Throwable {
+        registerPage.clickOnRegister();
+    }
 }

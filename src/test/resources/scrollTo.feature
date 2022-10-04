@@ -1,4 +1,4 @@
-@Scroll
+@scroll @regression
 Feature:
 
   Scenario: Validate Login page

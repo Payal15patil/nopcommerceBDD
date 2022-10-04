@@ -1,4 +1,4 @@
-@vote
+@vote @smoke
 Feature: Vote feature
   As a customer
   I want to vote for website

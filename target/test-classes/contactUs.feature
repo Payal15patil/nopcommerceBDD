@@ -1,4 +1,4 @@
-@contact
+@contact @regression
 Feature: Contact Us Feature
   As a customer
   I want to contact the store owner
@@ -12,4 +12,4 @@ Feature: Contact Us Feature
       | name  | email                | enquiry                      |
       | Payal | payal15794@gmail.com | I want to change the product |
     Then I click on submit button
-    And I should see "Your enquiry has been successfully sent to the store owner" text on "contactus" page
+    And I should see "Your enquiry has been successfully sent to the store owner." text on "contactus" page

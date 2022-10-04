@@ -6,8 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class JeweleryPage extends DriverManager {
 
-
-    @FindBy(className = "button-2 product-box-add-to-cart-button")
+    @FindBy(linkText = "Add to cart")
     WebElement addToCartButton;
 
     @FindBy(linkText = "Shopping cart")

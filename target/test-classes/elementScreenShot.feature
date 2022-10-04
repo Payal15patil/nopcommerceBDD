@@ -1,4 +1,4 @@
-@screenshot
+@screenshot @regression
 Feature: Element screenshot
 
 
